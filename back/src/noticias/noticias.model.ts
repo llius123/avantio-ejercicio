@@ -1,27 +1,31 @@
 // const mongoose = require("mongoose");
 import mongoose from 'mongoose';
-import { Validators, ValidationChain } from 'express-validator/src/chain';
 
 export const noticiaSchema = new mongoose.Schema({
   id:{
 	  type: String
   },
   title: {
-    type: String
+	type: String,
+	required: [true, 'Titulo obligatorio']
   },
   body: {
-    type: String
+	type: String,
+	required: [true, 'Body obligatorio']
   },
   image: {
-	type: String
+	type: String,
+	required: [true, 'Imagen obligatorio']
   },
   url: {
-    type: String
+	type: String,
+	required: [true, 'URL obligatorio']
   },
   publisher: {
 	type: String,
 	enum: ['pais', 'mundo'],
-	default: 'pais'
+	default: 'pais',
+	required: [true, 'Publisher obligatorio']
   }
 });
 
@@ -31,10 +35,11 @@ export interface NoticiaInterface {
 	body: string,
 	image: string,
 	url: string,
-	publisher: ['pais', 'mundo']
+	publisher: PUBLISHER
+}
+export enum PUBLISHER {
+	PAIS = 'pais',
+	MUNDO = 'mundo'
 }
 
-let Noticia;
-export default Noticia = mongoose.model("Noticia", noticiaSchema);
-
-module.exports = Noticia;
+export const Noticia = mongoose.model("Noticia", noticiaSchema);

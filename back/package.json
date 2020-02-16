@@ -21,8 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-	"start": "nodemon",
-    "start:watch": "nodemon",
+	"dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "start:debug": "nodemon --inspect",
     "build": "tsc"
   },
   "author": "Jesús María Berisa Nuñez",

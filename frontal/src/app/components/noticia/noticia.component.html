@@ -1,0 +1,15 @@
+<section class="tipo2" *ngFor="let noticia of noticias">
+	<header>
+		<img [src]="transformarImagen(noticia.image)">
+	</header>
+	<body>
+		<h3>
+			{{noticia.title}}
+		</h3>
+	</body>
+	<footer>
+		<p>
+			{{noticia.body | slice:0:200}}
+		</p>
+	</footer>
+</section>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { LeerNoticiaComponent } from './leer-noticia/leer-noticia.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
 				redirectTo: "mundo"
 			}
 		]
+	},
+	{
+		path: 'noticia',
+		component: LeerNoticiaComponent
 	},
 	{
 		path: "",

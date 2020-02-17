@@ -12,6 +12,8 @@ export class HomeService {
 
 	constructor(private httpClient: HttpClient) {}
 
+	public noticiaSeleccionadaParaLeer: {noticia: NoticiaInterface, url: string} = {noticia: null, url: ''};
+
 	public obtenerNoticiasFiltroPublisher(publisher: PUBLISHER): Observable<NoticiaInterface[]>{
 		return this.httpClient.get<NoticiaInterface[]>(environment.apiPath + 'noticias/' + publisher);
 	}

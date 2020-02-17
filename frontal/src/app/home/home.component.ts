@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { HomeService } from './home.service';
 import { PUBLISHER, NoticiaInterface } from '../components/noticia/noticia.component';
+import { EditarCrearNoticiaService } from '../components/editar-crear-noticia/editar-crear-noticia.service';
 
 @Component({
   selector: 'home-root',
@@ -10,7 +11,7 @@ import { PUBLISHER, NoticiaInterface } from '../components/noticia/noticia.compo
 })
 export class HomeComponent implements OnInit {
 	public noticias: NoticiaInterface[] = [];
-	constructor(private readonly router: Router, private readonly homeService: HomeService, private readonly activatedRoute: ActivatedRoute) {
+	constructor(private readonly router: Router, private homeService: HomeService, private readonly activatedRoute: ActivatedRoute, private readonly editarCrearNoticiaService: EditarCrearNoticiaService) {
 		// router.events.subscribe((val) => {
 		// 	this.obtenerNoticias(activatedRoute.data)
 		// });
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.obtenerNoticias()
+		this.editarCrearNoticiaService.open('home')
 	}
 
 	public async obtenerNoticias(){
@@ -33,5 +35,10 @@ export class HomeComponent implements OnInit {
 				)
 			}
 		)
+	}
+	public noticiaSeleccionada(noticia: NoticiaInterface){
+		this.homeService.noticiaSeleccionadaParaLeer.noticia = noticia;
+		this.homeService.noticiaSeleccionadaParaLeer.url = this.router.url;
+		this.router.navigate(['noticia'])
 	}
 }

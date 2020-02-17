@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NavegacionIzquierdaComponent } from './navegacion-izquierda.component';
+import { NavegacionIzquierdaHomeComponent } from './navegacion-izquierda-home/navegacion-izquierda-home.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NavegacionIzquierdaNoticiaComponent } from './navegacion-izquierda-noticia/navegacion-izquierda-noticia.component';
 
 
 @NgModule({
   declarations: [
-	NavegacionIzquierdaComponent
+	NavegacionIzquierdaHomeComponent,
+	NavegacionIzquierdaNoticiaComponent
   ],
   imports: [
 	CommonModule,
@@ -15,7 +17,8 @@ import { RouterModule } from '@angular/router';
 	RouterModule
   ],
   exports: [
-	  NavegacionIzquierdaComponent
+	  NavegacionIzquierdaHomeComponent,
+	  NavegacionIzquierdaNoticiaComponent
   ]
 })
 export class NavegacionIzquierdaModule { }

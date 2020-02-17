@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'navegacion-izquierda',
-  templateUrl: './navegacion-izquierda.component.html',
-  styleUrls: ['./navegacion-izquierda.component.scss']
+  selector: 'navegacion-izquierda-noticia',
+  templateUrl: './navegacion-izquierda-noticia.component.html',
+  styleUrls: ['./navegacion-izquierda-noticia.component.scss']
 })
-export class NavegacionIzquierdaComponent implements OnInit{
+export class NavegacionIzquierdaNoticiaComponent implements OnInit{
 
 	constructor(private readonly router: Router){}
 

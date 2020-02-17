@@ -1,5 +1,10 @@
 :host{
 	.contenido{
+		fecha{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 		display: flex;
 		flex-direction: row;
 		width: 100%;
@@ -10,7 +15,18 @@
 			}
 			&:nth-child(2){
 				width: 80%;
-				margin: 0 0 0 40px;
+				margin: 120px 40px 0 40px;
+				width: 100%;
+				height: 100%;
+				display: block;
+				noticia{
+					width: 100%;
+					height: 100vh;
+					display: block;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
 			}
 		}
 		@media (max-width: 320px) {

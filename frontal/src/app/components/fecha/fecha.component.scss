@@ -1,0 +1,28 @@
+:host{
+	section{
+		background: #2E363D;
+		border-bottom-left-radius: 32px;
+		width: 290px;
+		height: 66px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		p{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 17px;
+			text-align: right;
+			letter-spacing: 1.16667px;
+			color: #FAFBFE;
+		}
+		@media (max-width: 320px) {
+			height: 35px;
+			width: 180px;
+		}
+		@media (max-width: 768px) { 
+			// height: 33px;
+		}
+	}
+}

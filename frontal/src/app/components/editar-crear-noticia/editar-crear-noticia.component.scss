@@ -1,0 +1,23 @@
+:host{
+	.modal {
+		opacity: 0;
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: left;
+		background: rgba(0,0,0, .9);
+		transition: opacity .25s ease;
+	}
+	
+	.modal__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		cursor: pointer;
+	}
+}

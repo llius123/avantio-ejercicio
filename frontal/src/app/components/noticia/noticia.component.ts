@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export interface NoticiaInterface {
@@ -23,10 +23,16 @@ export class NoticiaComponent {
 
 	@Input() noticias: NoticiaInterface[];
 
+	@Output() noticiaSeleccionada: EventEmitter<NoticiaInterface> = new EventEmitter<NoticiaInterface>();
+
 	constructor(private sanitizer: DomSanitizer){}
 
 
 	public transformarImagen(base64: string): SafeResourceUrl{
 		return this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' + base64);
+	}
+
+	public seleccionarNoticiaParaLeer(noticia: NoticiaInterface){
+		this.noticiaSeleccionada.emit(noticia);
 	}
 }

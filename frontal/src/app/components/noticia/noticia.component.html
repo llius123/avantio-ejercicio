@@ -1,4 +1,4 @@
-<section class="tipo2" *ngFor="let noticia of noticias">
+<section (click)="seleccionarNoticiaParaLeer(noticia)" [ngClass]="{'tipo1': i == 0, 'tipo2': i == 1 || i == 2, 'tipo3': i >= 3 }" *ngFor="let noticia of noticias; let i = index">
 	<header>
 		<img [src]="transformarImagen(noticia.image)">
 	</header>
@@ -9,7 +9,7 @@
 	</body>
 	<footer>
 		<p>
-			{{noticia.body | slice:0:200}}
+			{{noticia.body | slice:0:150}}
 		</p>
 	</footer>
 </section>

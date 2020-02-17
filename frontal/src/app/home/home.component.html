@@ -1,8 +1,11 @@
 <div class="contenido">
 	<section>
-		<navegacion-izquierda></navegacion-izquierda>
+		<navegacion-izquierda-home></navegacion-izquierda-home>
 	</section>
 	<section>
-		<noticia [noticias]="noticias"></noticia>
+		<noticia [noticias]="noticias" (noticiaSeleccionada)="noticiaSeleccionada($event)"></noticia>
 	</section>
+	<fecha></fecha>
 </div>
+
+<editar-crear-noticia id="'home'"></editar-crear-noticia>

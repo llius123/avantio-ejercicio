@@ -10,6 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeService {
 
+	public nuevaNoticia: EventEmitter<NoticiaInterface> = new EventEmitter<NoticiaInterface>();
+	public noticiaEditada: EventEmitter<NoticiaInterface> = new EventEmitter<NoticiaInterface>();
+
 	constructor(private httpClient: HttpClient) {}
 
 	public noticiaSeleccionadaParaLeer: {noticia: NoticiaInterface, url: string} = {noticia: null, url: ''};

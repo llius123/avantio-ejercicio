@@ -1,0 +1,39 @@
+<div class="ve-modal">
+	<div class="ve-modal-body" [@cambiarTamañoDivFormulario]="estadoDelModal">
+		<section>
+			<header>
+				<span>
+					Nueva noticia
+				</span>
+				<button type="button" class="primario" (click)="guardar()">
+					<span aria-hidden="true">Guardar</span>
+				</button>
+				<button type="button" class="secundario" (click)="modalService.close()">
+					<span aria-hidden="true">Cancelar</span>
+				</button>
+			</header>
+			<body>
+				<form [formGroup]="formulario">
+					<label>
+						Img
+					</label>
+					<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" />
+					<label>
+						Url
+					</label>
+					<input type="text" formControlName="url">
+					<label>
+						Titulo
+					</label>
+					<input type="text" formControlName="title">
+					<label>
+						Contenido
+					</label>
+					<textarea formControlName="body" type="text" placeholder="Escribe aqui..."></textarea>
+				</form>
+			</body>
+		</section>
+	</div>
+</div>
+
+<div class="ve-modal-background"></div>

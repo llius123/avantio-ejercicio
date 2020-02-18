@@ -77,7 +77,7 @@ routerNoticias.get('/:publisher', async (req: Request, res: Response) => {
 
 //El esquema que voy a usar para validar el body de las peticiones POST
 const SchemaValidatorBodyNoticiaUpdate: any = {
-	id: {
+	_id: {
 		isLength: {
 			errorMessage: 'id no puede estar vacio',
 			options: {min: 1}

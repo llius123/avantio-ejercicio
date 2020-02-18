@@ -1,0 +1,32 @@
+:host{
+	.open-close-container {
+		border: 1px solid #dddddd;
+		margin-top: 1em;
+		padding: 20px 20px 0px 20px;
+		color: #000000;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	label{
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 15px;
+		color: #505050;
+	}
+	body{
+		padding: 5px;
+		input, textarea{
+			height: 56px;
+			border: 0.6px solid #D8D8D8;
+			box-sizing: border-box;
+			border-radius: 3px;
+			width: 100%;
+			padding: 5px;
+		}
+		textarea{
+			height: 100vh;
+		}
+	}
+}

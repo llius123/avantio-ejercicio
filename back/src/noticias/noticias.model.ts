@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 
 export const noticiaSchema = new mongoose.Schema({
-  id:{
+  _id:{
 	  type: String
   },
   title: {
@@ -30,7 +30,7 @@ export const noticiaSchema = new mongoose.Schema({
 });
 
 export interface NoticiaInterface {
-	id: string,
+	_id: string,
 	title: string,
 	body: string,
 	image: string,

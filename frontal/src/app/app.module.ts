@@ -14,7 +14,6 @@ import { HomeModule } from './home/home.module';
 import { NoticiaModule } from './components/noticia/noticia.module';
 import { LeerNoticiaModule } from './leer-noticia/leer-noticia.module';
 import { FechaComponent } from './components/fecha/fecha.component';
-import { EditarCrearNoticiaModule } from './components/editar-crear-noticia/editar-crear-noticia.module';
 
 @NgModule({
   declarations: [

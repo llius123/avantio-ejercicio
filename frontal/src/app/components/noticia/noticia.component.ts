@@ -29,7 +29,11 @@ export class NoticiaComponent {
 
 
 	public transformarImagen(base64: string): SafeResourceUrl{
-		return this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' + base64);
+		if(base64.includes('data:image')){
+			return this.sanitizer.bypassSecurityTrustResourceUrl(base64);
+		}else{
+			return this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' + base64);
+		}
 	}
 
 	public seleccionarNoticiaParaLeer(noticia: NoticiaInterface){

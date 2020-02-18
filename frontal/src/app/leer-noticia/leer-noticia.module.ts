@@ -5,6 +5,7 @@ import { NavegacionIzquierdaModule } from '../components/navegacion-izquierda/na
 import { HomeService } from '../home/home.service';
 import { FechaComponent } from '../components/fecha/fecha.component';
 import { ComponentModule } from '../components/components.module';
+import { ModalModule } from '../components/editar-crear-noticia/modal.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,8 @@ import { ComponentModule } from '../components/components.module';
   imports: [
 	BrowserModule,
 	NavegacionIzquierdaModule,
-	ComponentModule
-
+	ComponentModule,
+	ModalModule
   ],
   providers: [HomeService]
 })

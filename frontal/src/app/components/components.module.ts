@@ -2,12 +2,11 @@ import { NgModule } from "@angular/core";
 import { NavegacionIzquierdaModule } from './navegacion-izquierda/navegacion-izquierda.module';
 import { NoticiaModule } from './noticia/noticia.module';
 import { FechaComponent } from './fecha/fecha.component';
-import { EditarCrearComponent } from './editar-crear-noticia/editar-crear-noticia.component';
-import { EditarCrearNoticiaModule } from './editar-crear-noticia/editar-crear-noticia.module';
+import { ModalModule } from './editar-crear-noticia/modal.module';
 
 @NgModule({
 	declarations: [FechaComponent],
-	imports: [NavegacionIzquierdaModule, NoticiaModule, EditarCrearNoticiaModule],
+	imports: [NavegacionIzquierdaModule, NoticiaModule, ModalModule],
 	exports: [FechaComponent],
 	providers: []
 })

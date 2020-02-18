@@ -7,7 +7,7 @@ import { NoticiaComponent } from '../components/noticia/noticia.component';
 import { NoticiaModule } from '../components/noticia/noticia.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FechaComponent } from '../components/fecha/fecha.component';
-import { EditarCrearNoticiaModule } from '../components/editar-crear-noticia/editar-crear-noticia.module';
+import { ModalModule } from '../components/editar-crear-noticia/modal.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { EditarCrearNoticiaModule } from '../components/editar-crear-noticia/edi
 	  NoticiaModule,
 	  HttpClientModule,
 	  ComponentModule,
-	  EditarCrearNoticiaModule
+	  ModalModule
   ],
   providers: [HomeService],
 })

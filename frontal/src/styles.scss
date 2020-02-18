@@ -102,51 +102,84 @@ h6 {
 // @media (min-width: 1440px) { 
 
 // }
-
+button{
+	cursor: pointer;
+}
 ve-modal {
-	/* modals are hidden by default */
 	display: none;
+	overflow: hidden;
+	resize: both;
+	button {
+		width: 112px;
+		height: 40px;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #FFFFFF;
+		border: none;
+		cursor: pointer;
+		border-radius: 2px;
+	}
+	.primario{
+		background: #F15F41;
+		float: right;
+	}
+	.secundario{
+		color: #939393;
+		float: right;
+	}
 }
 .ve-modal {
-	/* modal container fixed across whole screen */
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	/* z-index must be higher than .jw-modal-background */
 	z-index: 1000;
-	
-	/* enables scrolling for tall modals */
-	overflow: auto;
-	/* Border */
 	width: 100%;
+	section{
+		display: flex;
+		flex-direction: column;
+		header{
+			margin-top: 80px;
+			button {
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+		}
+	}
 }
 .ve-modal .ve-modal-body {
-	margin: auto;
-	margin-top: 5em !important;
-	padding: 20px;
-	width: 60%;
-	background: grey;
+  margin: auto;
+  width: 60%;
+  background: grey;
+  height: 100%;
+  float: right;
+  background: #FFFFFF;
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 33px 3px 3px 3px;
 }
 .ve-modal-body span {
-	font-size: 22px;
+  font-size: 22px;
 }
 .ve-modal-background {
-	/* modal background fixed across whole screen */
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	/* semi-transparent black */
-	background-color: #000;
-	opacity: 0.4;
-	
-	/* z-index must be below .jw-modal and above everything else */
-	z-index: 900;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 900;
 }
 body.ve-modal-open {
-	verflow: hidden;
+  overflow: hidden;
+}
+#home{
+	width: 100vh;
+	height: 100vh;
 }
